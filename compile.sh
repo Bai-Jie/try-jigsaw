@@ -2,13 +2,16 @@
 
 set -eu
 
-OUTPUT_MODULE_PATH="build/classes/gq.baijie.tryjigsaw"
+MODULE_NAME="gq.baijie.tryjigsaw"
+SOURCE_PATH="src/main/java"
 
-echo "Creating folder $OUTPUT_MODULE_PATH, if it does not exists."
-mkdir -p $OUTPUT_MODULE_PATH
+OUTPUT_CLASS_PATH="build/classes/$MODULE_NAME"
+
+echo "Creating folder $OUTPUT_CLASS_PATH, if it does not exists."
+mkdir -p $OUTPUT_CLASS_PATH
 
 echo "Compiling"
-javac -d $OUTPUT_MODULE_PATH \
-        src/main/java/gq.baijie.tryjigsaw/module-info.java \
-        src/main/java/gq.baijie.tryjigsaw/gq/baijie/tryjigsaw/TryJigsaw.java
+javac -d $OUTPUT_CLASS_PATH \
+        ${SOURCE_PATH}/${MODULE_NAME}/module-info.java \
+        ${SOURCE_PATH}/${MODULE_NAME}/gq/baijie/tryjigsaw/TryJigsaw.java
 
