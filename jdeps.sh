@@ -1,7 +1,8 @@
 #!/bin/bash
 
-CLASS_PATH="build/classes"
+MODULE_NAME="gq.baijie.tryjigsaw"
+MODULE_PATH="build/classes/$MODULE_NAME"
 
 set -eu
 
-jdeps $CLASS_PATH
+jdeps $MODULE_PATH

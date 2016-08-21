@@ -1,7 +1,8 @@
 #!/bin/bash
 
-CLASS_PATH="build/classes"
+MODULE_NAME="gq.baijie.tryjigsaw"
+MODULE_PATH="build/classes/$MODULE_NAME"
 
 set -eu
 
-java -cp $CLASS_PATH gq.baijie.tryjigsaw.TryJigsaw
+java -mp $MODULE_PATH -m ${MODULE_NAME}/${MODULE_NAME}.TryJigsaw
